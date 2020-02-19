@@ -15,7 +15,7 @@ Home
 
 ```
             ____________________
-  (input) O --:--       ALARMS 0 O (toggle)
+  (input) O hh:mm       ALARMS 0 O (toggle)
   (input) O DD/MM    EDIT ALARMS O (menu)
   (input) O YYYY           --:-- O (input*) (quick-alarm)
   (cycle) O DAY             TEST O (trigger)
@@ -40,7 +40,7 @@ Editing an alarm
 ```
             ____________________
    (menu) O <--         ACTIVE 0 O (toggle) (on/off)
-  (input) O --:--        PAUSE 0 O (input*) (count 0<=n<=9)
+ (input*) O --:--        PAUSE 0 O (input*) (count 0<=n<=9)
    (menu) O WEEKDAYS      TEMP 0 O (input*) (count 0<=n<=9)
           O                CLEAR O (trigger)
             ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
@@ -117,7 +117,7 @@ OSB
 
   * (input*)
 
-    Long hold clears field.
+    Nullable or has default value. Long hold resets field.
 
   If the field is validated or in some way more limited than the *scratchpad*,
   any attempt to input an invalid value is ignored. Any prior value in the field
@@ -230,7 +230,7 @@ any neighbors (mode A).*
 /Home/time and date fields
 --------------------------
 
-(--:--, DD/MM, YYYY, DAY)
+(hh:mm, DD/MM, YYYY, DAY)
 
 As well as acting as input fields to set current time and date, the fields are
 updated live at all times.
@@ -241,13 +241,16 @@ correct validation of 29/02 (29th of February).
 
 DAY is not validated and does not affect nor is affected by other fields.
 
+**Note:** Neither of the fields hh:mm, DD/MM, YYYY and DAY are nullable and
+will, at initial startup, be initialized from the RTC module (Real Time Clock).
+
 --------------------------------------------------------------------------------
 
 
 /Home/ALARMS
 --------------------------
 
-Master switch for alarms on/off. Does not impact individual alarms' set
+Master switch for alarms on/off. Does not impact individual alarms'
 ACTIVE-status. If off, no alarms will be checked or triggered.
 
 **Exception:** Any active quick-alarm is not affected and will still be checked.
