@@ -40,8 +40,8 @@ Editing an alarm
 ```
             ____________________
    (menu) O <--         ACTIVE 0 O (toggle) (on/off)
-  (input) O --:--        PAUSE 0 O (input*) (count)
-   (menu) O WEEKDAYS      TEMP 0 O (input*) (count)
+  (input) O --:--        PAUSE 0 O (input*) (count 0<=n<=9)
+   (menu) O WEEKDAYS      TEMP 0 O (input*) (count 0<=n<=9)
           O                CLEAR O (trigger)
             ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
@@ -277,18 +277,26 @@ Triggers the alarm function like any normal scheduled alarm.
 /Editing an alarm/PAUSE and TEMP
 --------------------------------
 
+PAUSE and TEMP serve to temporarily override any scheduling set in the alarm's
+WEEKDAYS menu. **Neither will override the alarm's ACTIVE status in any way**.
+
+Both PAUSE and TEMP are cleared (set to 0) if the alarm is disabled (ACTIVE=0).
+Any attempt to modify the value of PAUSE or TEMP when the alarm is disabled
+(ACTIVE=0) is ignored. If any of the fields is changed to a value other than 0,
+the other will be cleared (set to 0).
+
+**Summary:** Only one of PAUSE or TEMP can be active (greater than 0) at once.
+Neither PAUSE nor TEMP can be active (greater than 0) if the alarm is disabled
+(ACTIVE=0).
+
+
 #### PAUSE
 
-Number of times to silence the alarm. When the alarm triggers and PAUSE is
-greater than 0, the alarm is immediately canceled and PAUSE is decreased by 1.
+If PAUSE is greater than 0, whether or not the alarm is scheduled on that day,
+the alarm is silenced and PAUSE is decreased by 1.
+
 
 #### TEMP
 
-Number of times to force the alarm to trigger. If the alarm is disabled and
-TEMP is greater than 0, the alarm will behave as if it's enabled. When the alarm
-is triggered, TEMP is decreased by 1.
-
-#### Both
-
-Both PAUSE and TEMP are cleared (set to 0) if the alarm's ACTIVE status is
-changed.
+If TEMP is greater than 0, whether or not the alarm is scheduled on that day,
+the alarm is triggered and TEMP is decreased by 1.
