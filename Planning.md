@@ -86,12 +86,13 @@ Clock / Scratchpad + Rotary encoder
 4 digits (7-segment).
 
 
-#### In normal mode: *clock*
+### In normal mode: *clock*
 
 Shows time when *snooze/show time button* is held, otherwise off.
+Rotary encoder does nothing.
 
 
-#### In settings mode: *scratchpad*
+### In settings mode: *scratchpad*
 
 Changed with rotary encoder. CW +, CCW -.
 
@@ -109,11 +110,11 @@ OSB
 "On screen buttons". 4 on each side of the display.
 
 
-#### Modes
+### Modes
 
 * (input)
 
-  When pressed, copies set value from *scratchpad* to input field.
+  When pressed, copies value from *scratchpad* to input field.
   Resets *scratchpad*.
 
   Short hold copies value to *scratchpad*.
@@ -160,7 +161,7 @@ When held, shows time on *clock/scratchpad*.
 Cancel alarm button
 -----------------
 
-**Location: back**
+**Location: right side**
 
 When pressed, cancels alarm if active.
 
@@ -222,10 +223,61 @@ not, and must stop after {timeout} to avoid draining batteries and/or annoying
 any neighbors (mode A).*
 
 
-#### Variables
+### Variables
 
 * {snooze}: *To be decided*
 * {timeout}: *To be decided*
+
+--------------------------------------------------------------------------------
+
+
+Alarm states
+------------
+
+Alarms can be in different states. Not to be confused with modes
+(see Snoozing alarms).
+
+
+### Local (one alarm)
+
+* Disabled
+
+  ACTIVE is 0. The alarm will never be checked and therefore never triggered.
+
+* Active
+
+  ACTIVE is 1. The alarm will be checked at every occurrence of it's set time.
+  Depending on the alarms PAUSE, TEMP and WEEKDAYS settings, the alarm may or
+  may not trigger.
+
+
+### Global (*the* alarm)
+
+* (Triggered) (category of states)
+
+  Any active alarm (including quick-alarm) has triggered *the* alarm. *The*
+  alarm will remain in the triggered state (any sub-state) until canceled.
+
+  Other alarms will still be checked as normal. If *the* alarm is in mode A
+  and another alarm is triggered, {timeout} will be reset.
+
+  * Sounding (mode A or B) (default triggered state)
+
+    *The* alarm is currently sounding. *The* alarm will continue to sound until
+    snoozed or canceled.
+
+  * Snoozed (only mode B)
+
+    *The* alarm is currently snoozed. *The* alarm is paused for {snooze}.
+    If another alarm is triggered, *the* alarm will trigger (reset to sounding).
+
+* Off (Default state)
+
+  No alarm is currently triggered. This state is reached when a triggered alarm
+  is canceled.
+
+**In other words:** Valid global alarm states are: *Sounding*, *Snoozed*, and
+*Off*.
 
 --------------------------------------------------------------------------------
 
@@ -292,18 +344,18 @@ Any attempt to modify the value of PAUSE or TEMP when the alarm is disabled
 (ACTIVE=0) is ignored. If any of the fields is changed to a value other than 0,
 the other will be cleared (set to 0).
 
-**Summary:** Only one of PAUSE or TEMP can be active (greater than 0) at once.
-Neither PAUSE nor TEMP can be active (greater than 0) if the alarm is disabled
-(ACTIVE=0).
+**In other words:** Only one of PAUSE or TEMP can be active (greater than 0) at
+once. Neither PAUSE nor TEMP can be active (greater than 0) if the alarm is
+disabled (ACTIVE=0).
 
 
-#### PAUSE
+### PAUSE
 
 If PAUSE is greater than 0, whether or not the alarm is scheduled on that day,
 the alarm is silenced and PAUSE is decreased by 1.
 
 
-#### TEMP
+### TEMP
 
 If TEMP is greater than 0, whether or not the alarm is scheduled on that day,
 the alarm is triggered and TEMP is decreased by 1.
