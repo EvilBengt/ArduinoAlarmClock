@@ -129,7 +129,7 @@ OSB
 
 * (toggle)
 
-  When pressed, toggles field/value on/off.
+  When pressed, toggles field/value on/off (1/0).
 
 * (cycle)
 
