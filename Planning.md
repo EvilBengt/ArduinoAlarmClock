@@ -197,61 +197,13 @@ ALARMS setting.
 --------------------------------------------------------------------------------
 
 
-Snoozing alarms
----------------
-
-When an alarm is first triggered, the alarm is in mode A. If a sounding alarm is
-snoozed (with *Snooze/show time button*), the alarm pauses for {snooze}. The
-alarm also goes from mode A to mode B.
-
-
-* Mode A
-
-  Alarm sounds [continuosly or in intervals]* until canceled or {timeout}**.
-
-
-* Mode B
-
-  Alarm sounds [continuosly or in intervals]* indefinitely**, until canceled.
-
-
-**To be decided*
-
-***When an alarm is snoozed, the system can assume human presence and rely on
-further intervention to eventually cancel the alarm (mode B). If not, it can
-not, and must stop after {timeout} to avoid draining batteries and/or annoying
-any neighbors (mode A).*
-
-
-### Variables
-
-* {snooze}: *To be decided*
-* {timeout}: *To be decided*
-
---------------------------------------------------------------------------------
-
-
 Alarm states
 ------------
 
-Alarms can be in different states. Not to be confused with modes
-(see Snoozing alarms).
+* Off (Default state)
 
-
-### Local (one alarm)
-
-* Disabled
-
-  ACTIVE is 0. The alarm will never be checked and therefore never triggered.
-
-* Active
-
-  ACTIVE is 1. The alarm will be checked at every occurrence of it's set time.
-  Depending on the alarms PAUSE, TEMP and WEEKDAYS settings, the alarm may or
-  may not trigger.
-
-
-### Global (*the* alarm)
+  No alarm is currently triggered. This state is also reached when a triggered
+  alarm is canceled.
 
 * (Triggered) (category of states)
 
@@ -261,23 +213,35 @@ Alarms can be in different states. Not to be confused with modes
   Other alarms will still be checked as normal. If *the* alarm is in mode A
   and another alarm is triggered, {timeout} will be reset.
 
-  * Sounding (mode A or B) (default triggered state)
+  * Initial (default triggered state)
 
-    *The* alarm is currently sounding. *The* alarm will continue to sound until
-    snoozed or canceled.
+    *The* alarm is currently sounding [continuosly or in intervals]*. *The*
+    alarm will continue to sound until snoozed, canceled or until {timeout}.
 
-  * Snoozed (only mode B)
+  * Repeat
+
+    Same as *Initial*, except no timeout**.
+
+  * Snoozed
 
     *The* alarm is currently snoozed. *The* alarm is paused for {snooze}.
-    If another alarm is triggered, *the* alarm will trigger (reset to sounding).
+    After {snooze}, the alarm will reset to *Repeat*.
+    If another alarm is triggered, *the* alarm will reset to *Repeat*.
 
-* Off (Default state)
+**In other words:** Valid global alarm states are: *Off*, *Initial*, *Repeat*
+and *Snoozed*.
 
-  No alarm is currently triggered. This state is reached when a triggered alarm
-  is canceled.
+**To be decided*
 
-**In other words:** Valid global alarm states are: *Sounding*, *Snoozed*, and
-*Off*.
+***When an alarm is snoozed, the system can assume human presence and rely on
+further intervention to eventually cancel the alarm. If not, it can not, and
+must stop after {timeout} to avoid sounding indefinitely.
+
+
+### Variables
+
+* {snooze}: *To be decided*
+* {timeout}: *To be decided*
 
 --------------------------------------------------------------------------------
 
