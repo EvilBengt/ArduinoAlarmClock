@@ -249,7 +249,7 @@ DAY is not validated and does not affect nor is affected by other fields.
 Master switch for alarms on/off. Does not impact individual alarms' set
 ACTIVE-status. If off, no alarms will be checked or triggered.
 
-**Exception:** Any active quick-alarm is not affected.
+**Exception:** Any active quick-alarm is not affected and will still be checked.
 
 --------------------------------------------------------------------------------
 
