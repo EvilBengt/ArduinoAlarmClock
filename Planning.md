@@ -85,10 +85,13 @@ Clock / Scratchpad + Rotary encoder
 
 4 digits (7-segment).
 
-Shows time when *snooze/show time button* is held.
+
+#### In normal mode: *clock*
+
+Shows time when *snooze/show time button* is held, otherwise off.
 
 
-#### In settings mode:
+#### In settings mode: *scratchpad*
 
 Changed with rotary encoder. CW +, CCW -.
 
