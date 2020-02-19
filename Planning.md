@@ -257,9 +257,9 @@ ACTIVE-status. If off, no alarms will be checked or triggered.
 /Home/quick-alarm
 -----------------
 
-If quick-alarm time is set (from scratchpad), the alarm will trigger on time
-like any normal alarm. When triggered, the time will be cleared and the alarm
-will be disabled.
+If quick-alarm time is set (from *scratchpad*), the alarm will trigger like any
+normal alarm on the next occurrence of the set time. When triggered, the time
+will be cleared and the alarm will be disabled.
 
 Empty field (--:--) means no quick-alarm currently active.
 
