@@ -196,21 +196,27 @@ ALARMS setting.
 Snoozing alarms
 ---------------
 
-If a sounding alarm is snoozed (with *Snooze/show time button*), the alarm
-pauses for {snooze}. The alarm also goes from mode A to mode B.
+When an alarm is first triggered, the alarm is in mode A. If a sounding alarm is
+snoozed (with *Snooze/show time button*), the alarm pauses for {snooze}. The
+alarm also goes from mode A to mode B.
 
 
 * Mode A
 
-  Alarm sounds [continuosly or in intervals]* until canceled or {timeout}.
+  Alarm sounds [continuosly or in intervals]* until canceled or {timeout}**.
 
 
 * Mode B
 
-  Alarm sounds [continuosly or in intervals]* indefinitely, until canceled.
+  Alarm sounds [continuosly or in intervals]* indefinitely**, until canceled.
 
 
 **To be decided*
+
+***When an alarm is snoozed, the system can assume human presence and rely on
+further intervention to eventually cancel the alarm (mode B). If not, it can
+not, and must stop after {timeout} to avoid draining batteries and/or annoying
+any neighbors (mode A).*
 
 
 #### Variables
