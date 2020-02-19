@@ -1,5 +1,5 @@
 Menus
-=====
+================================================================================
 
 ```
             ____________________
@@ -61,7 +61,7 @@ WEEKDAYS
 
 
 Physical interface
-==================
+================================================================================
 
 
 Screen
@@ -179,21 +179,16 @@ When switching from off to on, current time is copied to *clock/scratchpad*.
 
 
 
-Function
-========
+Functions
+================================================================================
 
 
 Checking alarms
 ---------------
 
-If the ALARMS setting is on (1), all active alarms are checked at the start of
-every minute. Any set quick-alarm is checked independently of the ALARMS
-setting.
-
-An alarm is considered active if any of the following is true:
-
-* Its ACTIVE setting is on (1) *AND* PAUSE is 0.
-* Its TEMP setting is greater than 0.
+If the ALARMS setting is on (1), all active alarms (ACTIVE=1) are checked at the
+start of every minute. Any set quick-alarm is checked independently of the
+ALARMS setting.
 
 --------------------------------------------------------------------------------
 
