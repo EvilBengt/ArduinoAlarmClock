@@ -279,8 +279,8 @@ Triggers the alarm function like any normal scheduled alarm.
 
 #### PAUSE
 
-Number of times to silence the alarm. When the alarm triggers and PAUS is
-greater than 0, the alarm is immediately canceled and PAUS is decreased by 1.
+Number of times to silence the alarm. When the alarm triggers and PAUSE is
+greater than 0, the alarm is immediately canceled and PAUSE is decreased by 1.
 
 #### TEMP
 
