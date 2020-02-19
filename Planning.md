@@ -89,6 +89,7 @@ Clock / Scratchpad + Rotary encoder
 ### In normal mode: *clock*
 
 Shows time when *snooze/show time button* is held, otherwise off.
+
 Rotary encoder does nothing.
 
 
@@ -210,8 +211,8 @@ Alarm states
   Any active alarm (including quick-alarm) has triggered *the* alarm. *The*
   alarm will remain in the triggered state (any sub-state) until canceled.
 
-  Other alarms will still be checked as normal. If *the* alarm is in mode A
-  and another alarm is triggered, {timeout} will be reset.
+  Other alarms will still be checked as normal. If *the* alarm is in the
+  *Initial* state and another alarm is triggered, {timeout} will be reset.
 
   * Initial (default triggered state)
 
