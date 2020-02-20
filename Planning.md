@@ -202,6 +202,19 @@ When off, deactivates *settings mode*.
 
 When switching from off to on, current time is copied to *clock/scratchpad*.
 
+--------------------------------------------------------------------------------
+
+
+Alarm indicator
+---------------
+
+**Location: front**
+
+Type: LED.
+
+Lights up as long as *the* alarm is triggered. Serves as a reminder to cancel
+the alarm if it is snoozed.
+
 
 
 Functions
