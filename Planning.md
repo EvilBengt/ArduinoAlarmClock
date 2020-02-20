@@ -225,7 +225,7 @@ Checking alarms
 ---------------
 
 If the ALARMS setting is on (1), all active alarms (ACTIVE=1) are checked at the
-start of every minute. Any set quick-alarm is checked independently of the
+start of every minute. The quick-alarm (if active) is checked independently of the
 ALARMS setting.
 
 --------------------------------------------------------------------------------
@@ -306,7 +306,8 @@ will, at initial startup, be initialized from the RTC module (Real Time Clock).
 Master switch for alarms on/off. Does not impact individual alarms'
 ACTIVE-status. If off, no alarms will be checked or triggered.
 
-**Exception:** Any active quick-alarm is not affected and will still be checked.
+**Exception:** The quick-alarm (if active) is not affected and will still be
+checked.
 
 --------------------------------------------------------------------------------
 
