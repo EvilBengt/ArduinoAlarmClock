@@ -78,13 +78,9 @@ Summary
 
 * Row 1
 
-  * Q - Quick alarm
+  * Q - Shows when quick alarm is active.
 
-    Shows when quick alarm is active.
-
-  * A - ALARMS setting
-
-    Shows when ALARMS setting is active.
+  * A - Shows when ALARMS setting is active.
 
 * Row 2
 
