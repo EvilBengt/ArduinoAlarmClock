@@ -60,6 +60,24 @@ WEEKDAYS
 
 
 
+Other screens
+================================================================================
+
+
+Summary
+-------
+
+```
+            ____________________
+          O      DAY  00/00      O (current date)
+          O         YYYY         O (current year)
+          O      ___  --:--      O (next alarm) ("___  --:--" if none)
+          O     _ DAYS --:--     O (time until alarm) ("_ DAYS --:--" if none)
+            ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+```
+
+
+
 Physical interface
 ================================================================================
 
@@ -155,6 +173,8 @@ Snooze/show time button
 When pressed, snoozes alarm if active.
 
 When held, shows time on *clock/scratchpad*.
+
+When held for more than 2 seconds, shows *Summary* on screen.
 
 --------------------------------------------------------------------------------
 
