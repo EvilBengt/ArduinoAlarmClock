@@ -261,13 +261,13 @@ Alarm states
   Any active alarm (including quick-alarm) has triggered *the* alarm. *The*
   alarm will remain in the triggered state (any sub-state) until canceled.
 
-  Other alarms will still be checked as normal. If *the* alarm is in the
-  *Initial* state and another alarm is triggered, {timeout} will be reset.
+  Other alarms will still be checked as normal.
 
   * Initial (default triggered state)
 
     *The* alarm is currently sounding [continuosly or in intervals]*. *The*
     alarm will continue to sound until snoozed, canceled or until {timeout}.
+    If another alarm is triggered, {timeout} will be reset.
 
   * Repeat
 
