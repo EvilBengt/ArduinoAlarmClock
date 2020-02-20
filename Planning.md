@@ -69,13 +69,34 @@ Summary
 
 ```
             ____________________
-          O      DAY  00/00      O (current date)
-          O         YYYY         O (current year)
-          O      ___  --:--      O (next alarm) ("___  --:--" if none)
-          O     _ DAYS --:--     O (time until alarm) ("_ DAYS --:--" if none)
+          O                  Q A O
+          O      DAY 00 MON      O
+          O      ___  --:--      O
+          O     _ DAYS --:--     O
             ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
 
+* Row 1
+
+  * Q - Quick alarm
+
+    Shows when quick alarm is active.
+
+  * A - ALARMS setting
+
+    Shows when ALARMS setting is active.
+
+* Row 2
+
+  Weekday, date and month.
+
+* Row 3
+
+  Next alarm, if any. Weekday and time.
+
+* Row 4
+
+  Time until next alarm. Days, hours and minutes.
 
 
 Physical interface
