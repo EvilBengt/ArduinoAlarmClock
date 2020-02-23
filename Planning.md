@@ -51,7 +51,7 @@ WEEKDAYS
 
 ```
             ____________________
-   (menu) O <--            THU 0 O (toggle) (all toggles on/off)
+   (menu) O <--            THU 0 O (toggle)
  (toggle) O 0 MON          FRI 0 O (toggle)
  (toggle) O 0 TUE          SAT 0 O (toggle)
  (toggle) O 0 WED          SUN 0 O (toggle)
