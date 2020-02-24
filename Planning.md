@@ -143,7 +143,25 @@ OSB
 
 **Location: front**
 
-"On screen buttons". 4 on each side of the display.
+"On screen buttons". 4 on each side of the display matching the display's
+character rows.
+
+
+### Interactions
+
+* Press
+
+  Pressed and released quickly.
+
+* Short hold
+
+  Held for more than 1 sec but less than 2 sec.
+
+* Long hold
+
+  Held for more than 2 sec.
+
+Different osb modes can treat press and hold in different ways.
 
 
 ### Modes
@@ -177,7 +195,9 @@ OSB
 
 * (trigger)
 
-  When pressed, activates a function.
+  When pressed (or held), activates a function.
+  Press, short hold and long hold can be used for different functions.
+
 
 --------------------------------------------------------------------------------
 
