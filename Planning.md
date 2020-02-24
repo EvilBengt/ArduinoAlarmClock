@@ -157,7 +157,7 @@ OSB
 
   * (input*)
 
-    Nullable or has default value. Long hold resets field.
+    Long hold resets field to default value or null (empty).
 
   If the field is validated or in some way more limited than the *scratchpad*,
   any attempt to input an invalid value is ignored. Any prior value in the field
