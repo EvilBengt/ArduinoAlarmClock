@@ -253,7 +253,6 @@ Lights up as long as *the* alarm is triggered. Serves as a reminder to cancel
 the alarm if it is snoozed.
 
 
-
 Functions
 ================================================================================
 
@@ -286,8 +285,8 @@ Alarm states
   * Initial (default triggered state)
 
     *The* alarm is currently sounding [continuosly or in intervals]*. *The*
-    alarm will continue to sound until snoozed, canceled or until {timeout}.
-    If another alarm is triggered, {timeout} will be reset.
+    alarm will continue to sound until snoozed, canceled or until {timeout}**.
+    If another alarm is triggered, {timeout}** will be reset.
 
   * Repeat
 
