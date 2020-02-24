@@ -164,7 +164,7 @@ character rows.
 Different osb modes can treat press and hold in different ways.
 
 
-### Modes
+### Modes (as seen in Menus)
 
 * (input)
 
