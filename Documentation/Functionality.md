@@ -15,7 +15,7 @@ Home
 
 ```
             ____________________
-  (input) O hh:mm       ALARMS 0 O (toggle)
+  (input) O hh:mm       ALARMS 0 O (cycle) (on/off)
   (input) O DD/MM    EDIT ALARMS O (menu)
   (input) O YYYY           --:-- O (input*) (quick-alarm)
   (cycle) O DAY             TEST O (trigger)
@@ -39,7 +39,7 @@ Editing an alarm
 
 ```
             ____________________
-   (menu) O <--         ACTIVE 0 O (toggle) (on/off)
+   (menu) O <--         ACTIVE 0 O (cycle) (on/off)
  (input*) O --:--        PAUSE 0 O (input*) (count 0<=n<=9)
    (menu) O WEEKDAYS      TEMP 0 O (input*) (count 0<=n<=9)
           O                CLEAR O (trigger)
@@ -51,10 +51,10 @@ WEEKDAYS
 
 ```
             ____________________
-   (menu) O <--            THU 0 O (toggle)
- (toggle) O 0 MON          FRI 0 O (toggle)
- (toggle) O 0 TUE          SAT 0 O (toggle)
- (toggle) O 0 WED          SUN 0 O (toggle)
+   (menu) O <--            THU 0 O (cycle) (all on/off)
+  (cycle) O 0 MON          FRI 0 O (cycle)
+  (cycle) O 0 TUE          SAT 0 O (cycle)
+  (cycle) O 0 WED          SUN 0 O (cycle)
             ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 ```
 
@@ -184,10 +184,6 @@ Different osb modes can treat press and hold in different ways.
 * (menu)
 
   When pressed, switches to another menu.
-
-* (toggle)
-
-  When pressed, toggles field/value on/off (1/0).
 
 * (cycle)
 
