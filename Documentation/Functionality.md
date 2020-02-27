@@ -257,8 +257,8 @@ Checking alarms
 ---------------
 
 If the ALARMS setting is on (1), all active alarms (ACTIVE=1) are checked at the
-start of every minute. The quick-alarm (if active) is checked independently of the
-ALARMS setting.
+start of every minute. The quick-alarm (if active) is checked independently of
+the ALARMS setting.
 
 --------------------------------------------------------------------------------
 
