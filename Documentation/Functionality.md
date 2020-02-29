@@ -169,16 +169,16 @@ Different osb modes can treat press and hold in different ways.
 
 * (input)
 
-  When pressed, copies value from *scratchpad* to input field.
-  Resets *scratchpad*.
+  When pressed, copies value from `scratchpad` to input field.
+  Resets `scratchpad`.
 
-  Short hold copies value to *scratchpad*.
+  Short hold copies value to `scratchpad`.
 
   * (input*)
 
     Long hold resets field to default value or null (empty).
 
-  If the field is validated or in some way more limited than the *scratchpad*,
+  If the field is validated or in some way more limited than the `scratchpad`,
   any attempt to input an invalid value is ignored. Any prior value in the field
   is kept intact.
 
@@ -206,9 +206,9 @@ Snooze/show time button
 
 When pressed, snoozes alarm if active.
 
-When held, shows time on *clock/scratchpad*.
+When held, shows time on `clock/scratchpad`.
 
-When held for more than 2 seconds, shows *Summary* on screen.
+When held for more than 2 seconds, shows `Summary` on screen.
 
 --------------------------------------------------------------------------------
 
@@ -230,11 +230,11 @@ Settings mode switch
 
 Type: 2-position toggle switch.
 
-When on, activates *settings mode*.
+When on, activates `settings mode`.
 
-When off, deactivates *settings mode*.
+When off, deactivates `settings mode`.
 
-When switching from off to on, current time is copied to *clock/scratchpad*.
+When switching from off to on, current time is copied to `clock/scratchpad`.
 
 --------------------------------------------------------------------------------
 
@@ -282,33 +282,33 @@ Alarm states
   * Initial (default triggered state)
 
     *The* alarm is currently sounding [continuosly or in intervals]*. *The*
-    alarm will continue to sound until snoozed, canceled or until {timeout}**.
-    If another alarm is triggered, {timeout}** will be reset.
+    alarm will continue to sound until snoozed, canceled or until `timeout`**.
+    If another alarm is triggered, `timeout`** will be reset.
 
   * Repeat
 
-    Same as *Initial*, except no timeout**.
+    Same as `Initial`, except no timeout**.
 
   * Snoozed
 
-    *The* alarm is currently snoozed. *The* alarm is paused for {snooze}.
-    After {snooze}, the alarm will reset to *Repeat*.
-    If another alarm is triggered, *the* alarm will reset to *Repeat*.
+    *The* alarm is currently snoozed. *The* alarm is paused for `snooze`.
+    After `snooze`, the alarm will reset to `Repeat`.
+    If another alarm is triggered, *the* alarm will reset to `Repeat`.
 
-**In other words:** Valid global alarm states are: *Off*, *Initial*, *Repeat*
-and *Snoozed*.
+**In other words:** Valid global alarm states are: `Off`, `Initial`, `Repeat`
+and `Snoozed`.
 
 **To be decided*
 
 ***When an alarm is snoozed, the system can assume human presence and rely on
 further intervention to eventually cancel the alarm. If not, it can not, and
-must stop after {timeout} to avoid sounding indefinitely.
+must stop after `timeout` to avoid sounding indefinitely.
 
 
 ### Variables
 
-* {snooze}: *To be decided*
-* {timeout}: *To be decided*
+* `snooze`: *To be decided*
+* `timeout`: *To be decided*
 
 --------------------------------------------------------------------------------
 
@@ -348,7 +348,7 @@ checked.
 /Home/quick-alarm
 -----------------
 
-If quick-alarm time is set (from *scratchpad*), the alarm will trigger like any
+If quick-alarm time is set (from `scratchpad`), the alarm will trigger like any
 normal alarm on the next occurrence of the set time. When triggered, the time
 will be cleared and the alarm will be disabled.
 
