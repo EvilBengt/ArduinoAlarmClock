@@ -102,9 +102,14 @@ Physical interface
 Screen
 ------
 
+> **Terms**
+>
+> * `settings mode` - * <!-- TODO Define settings mode -->
+
+
 **Location: front**
 
-Used in settings mode.
+Used in `settings mode`.
 
 Width: 20 characters.
 
@@ -141,6 +146,12 @@ Long press on encoder clears value (sets 0000).
 
 OSB
 ---
+
+> **Terms**
+>
+> * `scratchpad` -
+    See *Physical interface > Clock / Scratchpad + Rotary encoder*
+
 
 **Location: front**
 
@@ -202,6 +213,13 @@ Different osb modes can treat press and hold in different ways.
 Snooze/show time button
 -----------------------
 
+> **Terms**
+>
+> * `clock/scratchpad` -
+    See *Physical interface > Clock / Scratchpad + Rotary encoder*
+> * `Summary` - See *Other screens > Summary*
+
+
 **Location: top**
 
 When pressed, snoozes alarm if active.
@@ -225,6 +243,13 @@ When pressed, cancels alarm if active.
 
 Settings mode switch
 --------------------
+
+> **Terms**
+>
+> * `settings mode` -  <!-- TODO Define settings mode -->
+> * `clock/scratchpad` -
+    See *Physical interface > Clock / Scratchpad + Rotary encoder*
+
 
 **Location: front**
 
@@ -266,6 +291,7 @@ the ALARMS setting.
 
 Alarm states
 ------------
+
 
 * Off (Default state)
 
@@ -347,6 +373,12 @@ checked.
 
 /Home/quick-alarm
 -----------------
+
+> **Terms**
+>
+> * `scratchpad` -
+    See *Physical interface > Clock / Scratchpad + Rotary encoder*
+
 
 If quick-alarm time is set (from `scratchpad`), the alarm will trigger like any
 normal alarm on the next occurrence of the set time. When triggered, the time
