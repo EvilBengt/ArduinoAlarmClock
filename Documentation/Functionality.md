@@ -104,8 +104,7 @@ Screen
 
 **Location: front**
 
-Used in settings mode. Also lights up as long as *the* alarm is sounding (shows
-the *Summary* screen).
+Used in settings mode.
 
 Width: 20 characters.
 
@@ -124,7 +123,8 @@ Clock / Scratchpad + Rotary encoder
 
 ### In normal mode: *clock*
 
-Shows time when *snooze/show time button* is held, otherwise off.
+Shows time when *snooze/show time button* is held or *the* alarm is sounding,
+otherwise off.
 
 Rotary encoder does nothing.
 
