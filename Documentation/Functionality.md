@@ -104,7 +104,8 @@ Screen
 
 **Location: front**
 
-Used in settings mode.
+Used in settings mode. Also lights up as long as *the* alarm is sounding (shows
+the *Summary* screen).
 
 Width: 20 characters.
 
