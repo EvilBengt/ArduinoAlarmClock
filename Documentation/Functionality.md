@@ -104,7 +104,7 @@ Screen
 
 > **Terms**
 >
-> * `settings mode` - * <!-- TODO Define settings mode -->
+> * `settings mode` - See *Global modes*
 
 
 **Location: front**
@@ -246,7 +246,7 @@ Settings mode switch
 
 > **Terms**
 >
-> * `settings mode` -  <!-- TODO Define settings mode -->
+> * `settings mode` - See *Global modes*
 > * `clock/scratchpad` -
     See *Physical interface > Clock / Scratchpad + Rotary encoder*
 
@@ -277,6 +277,28 @@ the alarm if it is snoozed.
 
 Functions
 ================================================================================
+
+
+Global modes
+------------
+
+> **Terms**
+>
+> * `Screen` - See *Physical interface > Screen*
+> * `clock/scratchpad` -
+    See *Physical interface > Clock / Scratchpad + Rotary encoder*
+
+
+* Normal mode (default)
+
+  All screens off unless triggered by other function.
+
+* Settings mode
+
+  `Screen` and `clock/scratchpad` on. `Screen` shows menus for setting up the
+  device and alarms.
+
+--------------------------------------------------------------------------------
 
 
 Checking alarms
